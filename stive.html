@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    <title>Projet Cube</title>
+    
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="stive.css" />
+                
+    <script src="jquery-3.6.3.min.js" type="text/javascript"></script>
+
+    <script src="stive.js" type="text/javascript"></script>
+
+    <script src="control.js" type="text/javascript"></script>
+      
+    </head>
+    
+    <body>
+        
+        <img src="domaine.webp" id="imgDomaine" style="position:fixed;">
+        
+        <div id="menuPrincipal" style="position:fixed; border:2px solid #C00; height:50px; color:#CCC; font-size:20px; background-color:#000;">
+            
+            <div id="menuArticlesDomaine" style="float:left; padding:15px 15px 0px 0px; text-align:center; height:35px; border-right:2px solid #C00; width:20%;">Lister les articles par Domaine</div>
+            
+            <div id="menuArticlesFamille" style="float:left; padding:15px 15px 0px 0px; text-align:center; height:35px; border-right:2px solid #C00; width:20%;">Lister les articles par Famille</div>
+            
+            <div id="voirSonProfil" style="float:left; padding:15px 15px 0px 0px; text-align:center; height:35px; border-right:2px solid #C00; width:15%;">Votre profil utilisateur</div>
+            
+            <div id="seConnecter" style="float:left; padding:15px 15px 0px 0px; text-align:center; height:35px; border-right:2px solid #C00; width:22%;">Se Connecter et Créer son profil</div>
+                                     
+            <div id="panierClient" style="float:left; padding:15px 15px 0px 0px; text-align:center; height:35px; width:16.5%;">Votre panier</div>
+            
+            <div style="clear:both;"></div>
+                           
+        </div>
+        
+        <div id="windowConnexion" class="form" 
+             
+             style="display: none; position:relative; padding-bottom:35px; width:750px; border:1px solid #F00; background-color:#363636; font-size:18px; color:#FFF; font-family:'Georgia , serif';">
+            
+            <div style="font-weight:bolder; font-size:24px; padding-top:10px; font-style:italic; text-align:center;" class="boutonTitre ">Acces Compte Client</div>
+
+            <hr style="width:650px; height:1.5px; background-color:#C00; border-color:#C00;">
+            
+            <div id="pageConnexion" class="form" style="font-size:16px; font-size:italic;">
+                                
+                <div id="image_email" style="float:left; margin-top:25px; width:25px; margin-left:25px;"></div>
+                
+                <div id="emailLabel" style="margin-top:30px; float:left; margin-left:37px; font-style:italic;">Adresse Mail : </div>
+
+                <div  style="margin-left:6px; margin-top:23px; float:left; color:#000;">
+
+                    <input type="email" id="email" size="35"/>
+                
+                </div>
+                
+                <div style="clear:both;"></div>
+                        
+                <div id="control_email"></div>
+                
+                <div style="clear:both;"></div>
+                
+                
+                
+                
+                <div id="image_motdepasse" style="margin-top:25px; margin-left:25px; float:left; width:25px;"></div>
+                
+                <div id="passwordLabel" style="margin-top:30px; float:left; margin-left:37px; font-style:italic;">Mot de passe : </div>
+
+                <div  style="margin-left:6px; margin-top:23px; float:left; color:#000;">
+
+                     <input type="password" id="motdepasse"/>
+
+                </div>
+                 
+                <div style="clear:both;"></div>
+              
+                <div id="control_motdepasse"></div>        
+                
+                <div style="clear:both;"></div>
+                
+                
+                
+                
+                 <div style="margin-top:25px; font-style:italic; font-size:0.75em; margin-left:25px; float:left;">
+                    
+                     <input type="checkbox" id="showPassword" style="float:left; margin-left:5px; margin-top:-5px;">&nbsp;Afficher le mot de passe
+                                           
+                </div>
+                
+                 <div style="clear:both;"></div>
+                
+                
+                <div style="margin-top:20px; font-size:0.75em; margin-left:25px; font-style:italic;">
+                    
+                    <div>Vous avez oublié votre mot de passe : <span style="color:#C00;" id="oubli">Cliquez ici ...</span></div> 
+                    
+                </div>
+                
+                <div style="margin-top:20px; font-size:0.75em; margin-left:25px; font-style:italic;">
+                    
+                    <div>Vous n'avez pas de compte : <span style="color:#0F0;" id="creerCompteClient">Créer un compte ...</span></div> 
+                    
+                </div>
+                
+            
+                <div id="submitConnexion" style="width:350px; margin-top:25px; font-size:16px;">
+    
+                    <div id="cancelConnexion" class="bouton" style="width:150px; height:30px; padding-top:10px; text-align:center; float:left;">Fermer</div>
+
+                    <div id="validerConnexion" class="bouton" style="margin-left:50px; width:150px; height:30px; padding-top:10px; text-align:center; float:left;">Valider</div>
+          
+                </div>
+                
+                <div style="clear:both;"></div>
+                
+    
+            </div>
+        
+        </div>
+        
+        
+        
+        <!--/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+        /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+        /*                                                                                                                                                                       */
+        /*                                                    Fin du formulaire de connexion                                                                                     */
+        /*                                                                                                                                                                       */
+        /*                                                    Début du formulaire d'inscription                                                                                  */
+        /*                                                                                                                                                                       */
+        /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+        /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/!-->
+        
+        
+        
+        
+        <div id="windowCreerCompteClient" class="form" 
+             
+             style="display:none; position:relative; padding-bottom:35px; width:900px; border:1px solid #F00; background-color:#363636; font-size:18px; color:#FFF; font-family:'Georgia , serif';">
+            
+            <div class="boutonTitre" style="font-weight:bolder; font-size:24px; padding-top:10px; font-style:italic; text-align:center;">Créer un Compte Client</div>
+
+            <hr style="width:800px; height:1.5px; border-color:#C00; background-color:#C00;">
+            
+            <div id="pageCreation" class="form" style="font-style:italic; font-size:14px;">
+                
+                <div id="image_nomClient" style="margin-top:25px; margin-left:15px; float:left; width:25px;"></div>
+                
+                <div id="labelNomClient" style="margin-top:30px; float:left; margin-left:90px;">Nom : </div>
+
+                <div  style="margin-left:6px; margin-top:23px; float:left; color:#000;">
+
+                    <input type="text" id="nomClient" size="30"/>
+                
+                </div>   
+                
+                <div style="clear:both;"></div>
+              
+                <div id="control_nomClient"></div>        
+                
+                <div style="clear:both;"></div>
+               
+                
+                
+                
+                 <div id="image_prenomClient" style="margin-top:25px; margin-left:15px; float:left; width:25px;"></div>
+                
+                <div id="labelPrenomClient" style="margin-top:30px; float:left; margin-left:70px;">Prénom : </div>
+
+                <div  style="margin-left:6px; margin-top:23px; float:left; color:#000;">
+
+                    <input type="text" id="prenomClient" size="30"/>
+                
+                </div>
+                
+                <div style="clear:both;"></div>
+                        
+                <div id="control_prenomClient"></div>
+                
+                <div style="clear:both;"></div>
+                
+                
+                
+                <div id="image_adresseClient" style="margin-top:25px; margin-left:15px; float:left; width:25px;"></div>
+                
+                <div id="labelAdresseClient" style="margin-top:30px; float:left; margin-left:69px;">Adresse : </div>
+
+                <div  style="margin-left:6px; margin-top:23px; float:left; color:#000;">
+
+                    <input type="text" id="adresseClient" size="50" />
+                
+                </div>
+                
+                <div style="clear:both;"></div>
+                        
+                <div id="control_adresseClient"></div>
+                
+                <div style="clear:both;"></div>
+             
+                
+                
+                 <div id="image_codePostalClient" style="margin-top:25px; margin-left:15px; float:left; width:25px; color:#0F0;">&#10004;</div>
+               
+                <div id="labelCodePostalClient" style="float:left; margin-top:30px; float:left; margin-left:48px;">Code Postal : </div>
+
+                <div  style="margin-left:6px; margin-top:23px; float:left; color:#000;">
+
+                    <input type="text" id="codePostalClient" size="9"/>
+                
+                </div>
+                
+                
+                
+                <div id="labelVilleClient" style="float:left;  margin-left:15px; margin-top:30px;">Ville : </div>
+
+                <div  style="margin-left:6px; margin-top:23px; float:left; color:#000;">
+
+                    <input type="text" id="villeClient" size="26"/>
+                
+                </div>
+                
+                <div style="clear:both;"></div>
+                        
+                
+                
+                
+                <div id="image_emailClient" style="margin-top:25px; margin-left:15px; float:left; width:25px;"></div>
+                
+                <div id="labelEmailCreationClient" style="margin-top:30px; float:left; margin-left:39px;">Adresse mail : </div>
+
+                <div  style="margin-left:6px; margin-top:23px; float:left; color:#000;">
+
+                    <input type="text" id="emailClient" size="35"/>
+                
+                </div>
+                
+                <div style="clear:both;"></div>
+                        
+                <div id="control_emailClient"></div>
+                
+                <div style="clear:both;"></div>
+                
+                
+                
+                
+                <div id="image_motdepasseClient" style="margin-top:25px; margin-left:15px; float:left; width:25px;"></div>
+                
+                <div id="labelMotdepasseCreationClient" style="margin-top:30px; float:left; margin-left:38px;">Mot de passe : </div>
+
+                <div  style="margin-left:6px; margin-top:23px; float:left; color:#000;">
+
+                    <input type="text" id="motdepasseClient" size="22"/>
+                
+                </div>
+                
+                <div style="clear:both;"></div>
+                        
+                <div id="control_motdepasseClient"></div>
+                
+                <div style="clear:both;"></div>
+                
+                <div id="nb_erreur_connexion" style="display:block;"></div>
+                
+                <div id="submitCreationClient" style="width:450px; margin-top:25px; font-size:16px;">
+    
+                    <div id="retourConnexionClient" class="bouton" style="margin-top:15px; width:275px; height:30px; padding-top:10px; text-align:center; float:left;">Retour connexion</div>
+
+                    <div id="validerCreationClient" class="bouton" style="margin-top:15px; margin-left:50px; width:125px; height:30px; padding-top:10px; text-align:center; float:left;">Valider</div>
+          
+                </div>
+                
+                <div style="clear:both;"></div>
+                
+            </div>
+         
+        </div>
+
+    
+
+    </body>
+</html>
+

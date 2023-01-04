@@ -1,0 +1,112 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 4 sept. 2017, 22:05:12
+    Author     : Harzallah Saïd
+*/
+
+@charset "utf-8";
+
+@-webkit-keyframes couleurs
+{
+    20%{background:#9FF; 
+    background: -webkit-linear-gradient(#FFF, #FFF, #DDD, #CCC, #999); }
+
+    35%{background:#9FF; 
+    background: -webkit-linear-gradient(#FFF, #FFF, #DDD, #CCC, #999); }
+	
+	
+    50%{background:#9FF; 
+    background: -webkit-linear-gradient(#999, #FFF, #FFF, #DDD, #CCC); }
+	
+    60%{background:#F9F; 
+    background: -webkit-linear-gradient(#CCC, #999, #FFF, #FFF, #DDD); }
+	
+    80%{background:#F9F; 
+    background: -webkit-linear-gradient(#DDD, #CCC, #999, #FFF, #FFF); }
+}
+
+
+@-webkit-keyframes couleurs_control
+{
+    25%{background:#02F;
+    background: -webkit-linear-gradient(#02F, #FFF, #FFF, #F36); }
+	
+    50%{background:#02F;
+    background: -webkit-linear-gradient(#F36, #02F, #FFF, #FFF);  }
+	
+    75%{background:#02F;
+    background: -webkit-linear-gradient(#FFF, #FFF, #F36, #02F);  }
+}
+
+
+.bouton  {
+    position:relative;
+    background: -webkit-linear-gradient(#DDD, #CCC, #999, #333);
+   
+    color:#000;
+    font-weight:bold;
+    font-style: italic;
+    text-align:center;
+    font-family:"Times New Roman", Times, serif;
+}
+
+.boutonTitre
+{
+    text-shadow:1px 3px 1px #EFEFEF;
+   
+    color:#0F0;
+}
+.bouton:hover {
+    cursor:pointer;
+
+    -webkit-animation:couleurs 1s linear infinite;
+   
+
+    text-shadow:1px 2px 1px #FFF;
+    z-index:99;
+    color:#333;
+}
+
+
+
+.bouton:active  {
+    text-shadow:1px 2px 1px #FFC;
+    background: -webkit-linear-gradient(#FFF, #CCC, #666, #333);
+    top:7px;
+}
+
+img {
+    border:none;
+}
+.background_input{
+    background:#FFFACD;
+    background: -webkit-linear-gradient( #BBB , #FFFACD );
+    
+    height:22px;
+ }
+.control{
+    clear:both;
+    display:block;
+    position:absolute;
+    z-index:2;
+    color:black !important;
+    width:320px;
+    height:36px;
+    padding-top:0px;
+    padding-left:6px;
+    padding-bottom:0px;
+    font-size:14px;
+    font-weight:bold;
+    border:1.7px solid #C00 !important;
+    border-radius:8px;
+    direction:ltr;
+    overflow:hidden;
+    text-shadow:1px 2px 1px #0FF;
+    background: -webkit-linear-gradient(#02F, #FFF, #F36);
+ 
+    -webkit-animation:couleurs_control 0.6s linear infinite;
+}
